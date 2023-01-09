@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop.dao.AddressMapper">
+    <insert id="insert" parameterType="AddressDto">
+        insert into address (id,postcode,road_address,jibun_address,detail_address,extra_address)
+        values (#{id},#{postcode},#{road_address},#{jibun_address},#{detail_address},#{extra_address})
+    </insert>
+    <select id="select" parameterType="String" resultType="AddressDto">
+        select * FROM address where id=#{id}
+    </select>
+    <delete id="delete" parameterType="String">
+        delete from address where id=#{id}
+    </delete>
+    <update id="update" parameterType="AddressDto">
+        update address
+        set postcode=#{postcode},
+            road_address=#{road_address},
+            jibun_address=#{jibun_address},
+            detail_address=#{detail_address},
+            extra_address=#{extra_address}
+        where id=#{id}
+    </update>
+
+</mapper>
+

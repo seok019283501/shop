@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop.dao.PaymentMapper">
+    <insert id="insert" parameterType="PaymentDto">
+        insert into payment
+        (id,goodsname,price,count,postcode,road_address,jibun_address,detail_address,extra_address,delivery)
+        values (#{id},#{goodsname},#{price},#{count},#{postcode}, #{road_address},#{jibun_address},#{detail_address},#{extra_address},#{delivery})
+    </insert>
+    <select id="select" parameterType="map" resultType="PaymentDto">
+        select * from payment where id=#{id} and bno=#{bno}
+    </select>
+    <select id="selectOrder" parameterType="int" resultType="PaymentDto">
+        select * from payment where delivery=#{delivery}
+    </select>
+    <select id="selectClient" parameterType="map" resultType="PaymentDto">
+        select * from payment where id=#{id} and delivery=#{delivery}
+    </select>
+    <update id="deliveryUpdate" parameterType="map">
+        update payment
+        set delivery=#{delivery}
+        where bno=#{bno}
+    </update>
+    <delete id="delete" parameterType="map">
+        delete from payment where id=#{id} and bno=#{bno}
+    </delete>
+    <delete id="withdrawal" parameterType="String">
+        delete from payment where id=#{id}
+    </delete>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop.dao.CartMapper">
+    <insert id="insert" parameterType="CartDto">
+        insert into cart (id,goodsname,count,bno,price)
+        values (#{id},#{goodsname},#{count},#{bno},#{price})
+    </insert>
+    <delete id="delete" parameterType="int">
+        delete from cart where cno=#{cno}
+    </delete>
+    <select id="select" parameterType="String" resultType="CartDto">
+        select * from cart where id=#{id}
+    </select>
+    <select id="selectGoods" parameterType="int" resultType="CartDto">
+        select * from cart where cno=#{cno}
+    </select>
+    <delete id="withdrawal" parameterType="String">
+        delete from cart where id=#{id}
+    </delete>
+</mapper>

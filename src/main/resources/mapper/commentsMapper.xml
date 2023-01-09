@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop.dao.CommentsMapper">
+    <insert id="insert" parameterType="CommentsDto">
+        insert into comments (bno,id,comment) values (#{bno},#{id},#{comment})
+    </insert>
+    <delete id="delete" parameterType="int">
+        delete from comments where cno=#{cno}
+    </delete>
+    <select id="select" parameterType="int" resultType="CommentsDto">
+        select * from comments where bno=#{bno}
+    </select>
+    <update id="modify" parameterType="int">
+        update comments
+        set comment=#{comment}
+        where cno=#{cno};
+    </update>
+    <delete id="withdrawal" parameterType="String">
+        delete from comments where id=#{id}
+    </delete>
+</mapper>

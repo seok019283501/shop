@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="CommentsDto" type="com.practice.shop.domain.CommentsDto"/>
+        <typeAlias alias="CertificationDto" type="com.practice.shop.domain.CertificationDto"/>
+        <typeAlias alias="CartDto" type="com.practice.shop.domain.CartDto"/>
+        <typeAlias alias="PaymentDto" type="com.practice.shop.domain.PaymentDto"/>
+        <typeAlias alias="AddressDto" type="com.practice.shop.domain.AddressDto"/>
+        <typeAlias alias="UserDto" type="com.practice.shop.domain.UserDto"/>
+        <typeAlias alias="BoardDto" type="com.practice.shop.domain.BoardDto"/>
+        <typeAlias alias="GoodsDto" type="com.practice.shop.domain.GoodsDto"/>
+    </typeAliases>
+</configuration>

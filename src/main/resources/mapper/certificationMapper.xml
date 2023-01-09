@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.shop.dao.CertificationMapper">
+    <insert id="insert" parameterType="CertificationDto">
+        insert into certification (number,phon_num)
+        values (#{number},#{phon_num})
+    </insert>
+    <delete id="delete" parameterType="int">
+        delete from certification where number=#{number}
+    </delete>
+    <delete id="deletePhon" parameterType="String">
+        delete from certification where phon_num=#{phon_num}
+    </delete>
+    <select id="select" parameterType="int" resultType="int">
+        select * from certification where number=#{number}
+    </select>
+
+</mapper>

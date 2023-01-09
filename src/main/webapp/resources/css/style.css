@@ -1,0 +1,112 @@
+
+*{
+
+    text-decoration: none;
+}
+body{
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 750px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 1000px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.top{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid black;
+}
+.middle{
+    width: 100%;
+    height: 85%;
+    border-bottom: 1px solid black;
+}
+
+li{
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+ul{
+    padding: 0;
+}
+.logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+search_in{
+    width: 70%;
+    height: 80px;
+}
+a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+.search{
+    margin-bottom: 20px;
+    height: 80px;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+
+}
+.user a{
+    width: 25%;
+    font-size: 13px;
+}
+img{
+    object-fit: cover;
+    width: 130px;
+    height: 150px;
+    padding: 20px;
+    background-color: #DCDCDC;
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+}
+.goodsBox{
+    display: flex;
+    flex-direction: row;
+}
+.goods{
+    height: 200px;
+    margin: 20px;
+}
+.goods1{
+
+    display: flex;
+    flex-direction: column;
+
+}
+.title{
+    margin-bottom:250px ;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    margin: 0 150px 0 150px;
+}
+.goods_in{
+    width: 250px;
+    margin: auto;
+    margin-bottom: 50px;
+
+}
